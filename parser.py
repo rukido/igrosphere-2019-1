@@ -12,7 +12,7 @@ def filter_lines(regexp, lines):
 
 if __name__ == "__main__":
     filename = "coverage-error.log"
-    regexp = r"\[\d\d\d\d\.\d\d\.\d\d \d\d:\d\d:d\d\].+"
-    lines = read_file(filename)
+    regexp = r"\[\d\d\d\d\.\d\d\.\d\d \d\d:\d\d:\d\d\].+"
+    lines = read_file(filename).split('\n')
     print("Author is m.struk")
     print(filter_lines(regexp, lines))
